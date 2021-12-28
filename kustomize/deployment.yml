@@ -1,3 +1,4 @@
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -18,7 +19,8 @@ spec:
       containers:
       - name: 2048-app
         # Replace with your docker registry info
-        image: <your_docker_registry>/<repo_name>/<image_name>:<tag>
+        #image: <your_docker_registry>/<repo_name>/<image_name>:<tag>
+        image: asherlab/game2048:latest
         ports:
         - name: http
           containerPort: 8000
@@ -29,3 +31,9 @@ spec:
           limits:
             cpu: "0.1"
             memory: 100Mi
+
+
+
+
+
+
